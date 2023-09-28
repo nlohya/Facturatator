@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -14,10 +15,7 @@ public class FacturatatorApplication extends Application {
     public void start(Stage stage) {
         StackPane root = new StackPane();
         createWindow(root);
-        Scene scene = new Scene(root, 300, 300);
-
-        Document document = new Document("Test", "Test", 28);
-        System.out.println(document);
+        Scene scene = new Scene(root, 255, 50);
 
         stage.setScene(scene);
         stage.setTitle("Facturatator");
@@ -26,7 +24,7 @@ public class FacturatatorApplication extends Application {
 
     public static void createWindow(StackPane root) {
 
-        VBox mainControls = new VBox();
+        HBox mainControls = new HBox();
         mainControls.setPadding(new Insets(10, 10, 10, 10));
         mainControls.setSpacing(10);
 

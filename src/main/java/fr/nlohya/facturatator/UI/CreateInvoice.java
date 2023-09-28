@@ -65,10 +65,10 @@ public class CreateInvoice {
         Label productLabel = new Label("Produits :");
         ListView<Product> productField = new ListView<>(FXCollections.observableList(
                 List.of(
-                        new Product("Prestation a", 180, "Test"),
-                        new Product("Prestation b", 190, "Test"),
-                        new Product("Prestation c", 240, "Test"),
-                        new Product("Prestation d", 350, "Test")
+                        new Product("Prestation a", 180, "Description prestation a"),
+                        new Product("Prestation b", 190, "Description prestation b"),
+                        new Product("Prestation c", 240, "Description prestation c"),
+                        new Product("Prestation d", 350, "Description prestation d")
                 )
         ));
         productField.setMaxHeight(150);
@@ -116,6 +116,7 @@ public class CreateInvoice {
                         .addChunk("Coûts additionnels : " + addCostField.getValue().toString() + " euros")
                         .addChunk("Prix total : " + totalCost + " euros")
                         .close();
+                stage.close();
             } catch (DocumentException | FileNotFoundException e) {
                 throw new RuntimeException(e);
             }
